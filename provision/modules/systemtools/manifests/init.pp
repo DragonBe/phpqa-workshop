@@ -8,7 +8,8 @@ class systemtools {
         "wget",
         "zip",
         "unzip",
-        "python-software-properties"
+        "python-software-properties",
+        "graphviz"
     ]
     package { $system_tools:
         ensure => "installed"
