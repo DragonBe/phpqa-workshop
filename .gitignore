@@ -1,2 +1,6 @@
 .idea/
 .vagrant/
+vendor/
+!build/README.md
+build/*
+composer.phar
