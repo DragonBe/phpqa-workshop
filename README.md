@@ -38,3 +38,5 @@ This workshop is part of the full [in2it] training course "QA for PHP profession
 
 [VirtualBox]: https://www.virtualbox.org
 [Vagrant]: https://www.vagrantup.com
+[this project on GitHub]: https://github.com/in2it/phpqa-workshop
+[in2it]: http://www.in2it.be
