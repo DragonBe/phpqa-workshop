@@ -32,6 +32,10 @@ We have provided a virtual configuration that's suited for usage throughout the 
 
 When you participate in the workshop, some exercises will be given. Follow the exercises as mentioned.
 
+## Come prepared
+
+If you participate in the workshop, please read the full [PREPARATION](PREPARATION.md) document for details.
+
 ## Licence
 
 This workshop is part of the full [in2it] training course "QA for PHP professionals". Copyright 2006 - 2015 &copy; [in2it] vof. All rights reserved.
