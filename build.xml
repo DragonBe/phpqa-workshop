@@ -25,7 +25,7 @@
 
     <target name="php-md" description="Mess detection">
         <exec
-            command="./vendor/bin/phpmd exercise/ html cleancode,codesize,controversial,design,naming,unusedcode --reportfile ./build/logs/phpmd.html"
+            command="./vendor/bin/phpmd exercise/ xml cleancode,codesize,controversial,design,naming,unusedcode --reportfile ./build/logs/pmd.xml"
             dir="${project.basedir}"/>
     </target>
 
