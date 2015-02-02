@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="PHPQA Workshop" default="build">
+
+    <fileset dir="${project.basedir}" id="files">
+        <include name="${project.basedir}/exercise/**"/>
+    </fileset>
+
+    <target name="php-lint" description="Run syntax checking on the codebase">
+        <phplint>
+            <fileset refid="files"/>
+        </phplint>
+    </target>
+
+    <target name="php-doc" description="Generate automated documentation">
+        <exec
+            command="./vendor/bin/phpdoc run -d exercise/ -t build/phpdoc/"
+            dir="${project.basedir}"/>
+    </target>
+
+    <target name="php-depend" description="Calculating dependency metrics">
+        <exec
+            command="./vendor/bin/pdepend --jdepend-xml=./build/logs/jdepend.xml --summary-xml=./build/logs/summary.xml --jdepend-chart=./build/graphs/jdepend.svg --overview-pyramid=./build/graphs/pyramid.svg exercise/"
+            dir="${project.basedir}"/>
+    </target>
+
+    <target name="php-md" description="Mess detection">
+        <exec
+            command="./vendor/bin/phpmd exercise/ html cleancode,codesize,controversial,design,naming,unusedcode --reportfile ./build/logs/phpmd.html"
+            dir="${project.basedir}"/>
+    </target>
+
+    <target name="php-cpd" description="Copy/Paste detection">
+        <exec
+            command="./vendor/bin/phpcpd --min-lines=2 --min-tokens=10 --fuzzy --log-pmd=./build/logs/pmd-cpd.xml exercise/"
+            dir="${project.basedir}"/>
+    </target>
+
+    <target name="php-cs" description="PHP CodeSniffer">
+        <exec
+            command="./vendor/bin/phpcs --standard=PSR2 --report=checkstyle --report-file=./build/logs/checkstyle.xml exercise/"
+            dir="${project.basedir}"/>
+    </target>
+
+    <target name="build" description="The build process">
+        <phingcall target="php-lint"/>
+        <phingcall target="php-doc"/>
+        <phingcall target="php-depend"/>
+        <phingcall target="php-md"/>
+        <phingcall target="php-cpd"/>
+        <phingcall target="php-cs"/>
+    </target>
+
+</project>
