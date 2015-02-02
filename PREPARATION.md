@@ -1,6 +1,6 @@
 # PHPQA Workshop Instructions
 
-![PHPQA Workshop SunshinePHP](http://plopster.blob.core.windows.net/in2it/phpqa-sunshinephp.png)
+![PHPQA Workshop](http://plopster.blob.core.windows.net/in2it/phpqa-header.png)
 
 Hi there,
 
@@ -85,8 +85,6 @@ Now install required development packages in both projects
 ## Other requirements
 
 If there are specific topics you also want to see during the workshop, shoot me an email to [training@in2it.be].
-
-See you all at [SunshinePHP]!!!
 
 [VirtualBox]: https://www.virtualbox.org
 [Vagrant]: https://www.vagrantup.com
