@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="PHPQA Workshop" default="build">
 
+    <!-- Create log directory -->
+    <mkdir dir="build/logs"/>
+
     <fileset dir="${project.basedir}" id="files">
         <include name="${project.basedir}/exercise/**"/>
     </fileset>
