@@ -1,6 +1,8 @@
 .idea/
 .vagrant/
 vendor/
-!build/README.md
-build/*
+build/graphs
+build/logs
+build/phpdoc
+build/info.php
 composer.phar
